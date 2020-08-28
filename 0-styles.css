@@ -26,6 +26,7 @@ li {
   background-color: #f7f7f7;
   font-size: 1.5rem;
   font-weight: 800;
+  padding-bottom: 60px;
 }
 
 li:not(:last-child) {
@@ -33,7 +34,7 @@ li:not(:last-child) {
 }
 
 .icon {
-  width: 95%;
+  width: 90%;
   height: 95%;
   display: block;
   margin: auto;
