@@ -1,0 +1,105 @@
+.menu {
+  transition: all 0.5s ease-in;
+  position: relative;
+  padding: 10px;
+}
+
+.menu .menu-open-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-open-button {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  position: relative;
+  background-color: darkred;
+  display: block;
+  transition: all 0.3s ease-in;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.menu-open:checked ~ .menu-open-button {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 10px;
+  transform: scale(1);
+}
+
+.menu-open-button:hover {
+  transform: scale(1.1);
+}
+
+.menu-line {
+  height: 2px;
+  width: 18px;
+  background-color: #ffffff;
+  z-index: 99999;
+  display: block;
+  margin: 2px;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line {
+  background-color: #ffffff;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line.menu-line-1 {
+  transform: rotate(-45deg);
+  top: 3px;
+  position: relative;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line.menu-line-2 {
+  display: none;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line.menu-line-3 {
+  transform: rotate(45deg);
+  top: -3px;
+  position: relative;
+}
+
+a {
+  position: relative;
+  opacity: 0;
+  left: 25px;
+  width: 0px;
+  height: 0px;
+  background-color: darkred;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  border: 1px solid darkred;
+  transition: all 0.3s;
+}
+
+.menu .menu-open:checked ~ a {
+  opacity: 1;
+  height: 50px;
+  width: 50px;
+  left: 0px;
+}
+
+a:hover {
+  background-color: #ffffff;
+}
+
+a:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+a i {
+  color: #ffffff;
+}
+
+a:hover i {
+  color: darkred;
+}
