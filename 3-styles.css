@@ -12,6 +12,7 @@
 }
 
 .menu-open-button {
+  cursor: pointer;
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -79,6 +80,7 @@ a {
   text-decoration: none;
   border: 1px solid darkred;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .menu .menu-open:checked ~ a {
